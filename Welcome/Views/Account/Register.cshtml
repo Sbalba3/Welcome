@@ -1,0 +1,54 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+<section class="signup">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Sign up</h2>
+                <form asp-action="Register"  class="register-form" id="register-form">
+                    <div class="form-group">
+                        <label asp-for="FName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input asp-for="FName"  id="name" placeholder="Your First Name" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input asp-for="LName" id="name" placeholder="Your Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"><i class="zmdi zmdi-email"></i></label>
+                        <input asp-for="Email" id="email" placeholder="Your Email" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input asp-for="Pass" id="pass" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPass"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <input asp-for="ConfirmPass" id="re_pass" placeholder="Repeat your password" />
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="IsAgree" type="checkbox"  class="agree-term" />
+                        <label asp-for="IsAgree" class="label-agree-term"><span><span></span></span>I agree all statements in Terms of service </label>
+                    </div>
+                    <div class="form-group form-button">
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image">
+                <figure><img src="~/Files/Images/signup-image.jpg" alt="sing up image"></figure>
+                <a asp-action="Login" class="signup-image-link">I am already member</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

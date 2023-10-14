@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\datatables\js\dataTables.bootstrap.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.bootstrap.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.bootstrap4.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.dataTables.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.dataTables.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.foundation.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.foundation.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.jqueryui.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.jqueryui.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.material.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.material.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.semanticui.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.semanticui.min.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.uikit.js" />
+    <None Include="wwwroot\lib\datatables\js\dataTables.uikit.min.js" />
+    <None Include="wwwroot\lib\datatables\js\jquery.dataTables.js" />
+    <None Include="wwwroot\lib\datatables\js\jquery.dataTables.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.BLL\Demo.BLL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<form asp-action="Details">
+    <div>
+        <label>Id</label>
+        <input asp-for="Id" class="form-control" readonly />
+    </div>
+    <div>
+        <label>First Name</label>
+        <input asp-for="FName" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input asp-for="LName" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" readonly />
+    </div>
+    <br />
+    <a asp-action="Edit" class="btn btn-secondary" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Index" class="btn btn-primary">Back To List</a>
+</form>
+

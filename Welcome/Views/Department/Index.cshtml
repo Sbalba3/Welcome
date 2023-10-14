@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Department>
+@{
+    ViewData["Title"] = "Index";
+}
+@if (TempData["Message"] is not null)
+{
+    <div class="alert alert-primary mt-3">
+        @TempData["Message"]
+    </div>
+}
+<h1>All Departments</h1>
+<br />
+<div>
+    <a asp-action="Create" class="btn btn-primary">Add Department</a>
+</div>
+<br />
+<div class="card shadow mb-4 text-center">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="" id="myTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="text text-center">Name</th>
+                        <th class="text text-center">Code</th>
+                        <th class="text text-center">Date Of Creation</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Code</td>
+                            <td>@item.CreatedDate</td>
+                            <td><a asp-controller="Department" asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning"><i class="fas fa-eye"></i></a></td>
+                            <td><a asp-controller="Department" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success"><i class="fas fa-edit"></i></a></td>
+                            <td><a asp-controller="Department" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+                            <td><a asp-controller="Department" asp-action="EmployeesCount" asp-route-id="@item.Id" class="btn btn-primary">Count</a></td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/lib/datatables/datatables.js"></script>
+    <script src="~/lib/datatables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable(
+
+
+
+            );
+        });
+    </script>
+
+}

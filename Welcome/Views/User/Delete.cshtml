@@ -1,0 +1,32 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<form asp-action="Delete">
+    <div>
+        <label>Id</label>
+        <input asp-for="Id" class="form-control" readonly />
+    </div>
+    <div>
+        <label>First Name</label>
+        <input asp-for="FName" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input asp-for="LName" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" readonly />
+    </div>
+    <br />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-primary">Cancle</a>
+</form>

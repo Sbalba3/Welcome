@@ -1,0 +1,43 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1> Are you sure you want Delete this Employee</h1>
+
+<form asp-action="Delete">
+    <input hidden asp-for="ImageName" />
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" readonly/>
+      
+    </div>
+    <div>
+        <label>Age</label>
+        <input asp-for="Age" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Salary</label>
+        <input asp-for="Salary" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" readonly />
+    </div>
+ 
+    <div>
+        <label>Hire Date</label>
+        <input asp-for="HireDate" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" readonly />
+    </div>
+    <br />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-primary">Cancle</a>
+</form>
